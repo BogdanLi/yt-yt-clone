@@ -17,19 +17,19 @@ const Header = () => {
   return (
     <header>
       <Container className="py-3">
-        <div className="flex justify-between items-center bg-white rounded-full py-3 px-8">
+        <div className="flex items-center justify-between rounded-full bg-white px-8 py-3">
           <div className="flex gap-12">
             <Link href="/">
               <Image src={logo.src} alt="logo" width={54} height={20} />
             </Link>
-            <div className="gap-10 hidden md:flex">
+            <div className="hidden gap-10 md:flex">
               {links.map((link) => (
                 <NavLink key={link}>{link}</NavLink>
               ))}
             </div>
           </div>
-          <div>
-            <Button variant="tertiary" className="hidden">
+          <div className="flex">
+            <Button variant="tertiary" className="hidden lg:block">
               Регистрация
             </Button>
             <Button variant="primary">Войти</Button>

@@ -6,7 +6,7 @@ interface NavLinkProps {
 
 export const NavLink = ({ children }: NavLinkProps) => {
   return (
-    <button className="text-sm hover:text-secondary transition-all duration-150">
+    <button className="text-sm transition-all duration-150 hover:text-secondary">
       {children}
     </button>
   );
@@ -31,7 +31,7 @@ export const Button = ({
 
   return (
     <button
-      className={`group transition-all duration-150 py-2 px-4 rounded-3xl ${variants[variant]} ${className}`}
+      className={`group rounded-3xl px-4 py-2 transition-all duration-150 ${variants[variant]} ${className}`}
     >
       {children}
     </button>

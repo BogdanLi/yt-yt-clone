@@ -1,14 +1,15 @@
 import Image from "next/image";
-import { Button } from "../UI/Buttons";
-import Container from "../UI/Container";
+import { Button } from "../../UI/Buttons";
+import Container from "../../UI/Container";
 
-import hero from "@/assets/images/hero.png";
+import hero from "@/assets/images/hero.svg";
+import Section from "../../UI/Section";
 
 const HeroSection = () => {
   return (
-    <section>
+    <Section>
       <Container>
-        <div className="grid md:grid-cols-5 items-center gap-12 my-12">
+        <div className="my-12 grid items-center gap-12 md:grid-cols-5">
           <div className="col-span-3 text-center sm:text-start md:w-3/4">
             <p className="text-2xl md:text-4xl">
               Школа{" "}
@@ -27,12 +28,12 @@ const HeroSection = () => {
               Пройти тестирование
             </Button>
           </div>
-          <div className="hidden md:block col-span-2">
+          <div className="col-span-2 hidden md:block">
             <Image src={hero.src} priority alt="" width={400} height={400} />
           </div>
         </div>
       </Container>
-    </section>
+    </Section>
   );
 };
 
