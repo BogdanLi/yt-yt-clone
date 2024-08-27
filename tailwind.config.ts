@@ -12,6 +12,7 @@ const config: Config = {
         primary: "#38BFF2",
         secondary: "#F15525",
         dark: "#3C3E50",
+        gray: "#eaf2f5",
       },
     },
   },

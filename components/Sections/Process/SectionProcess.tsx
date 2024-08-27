@@ -42,11 +42,11 @@ const ProcessSection = () => {
             <ProcessCard key={step.step} {...step} />
           ))}
         </div>
-        <div className="mx-auto mt-4 flex w-fit flex-col items-center gap-4 rounded-3xl bg-white p-2 text-center lg:flex-row lg:rounded-full lg:text-start">
+        <div className="mx-auto mt-4 flex flex-col items-center gap-4 rounded-3xl bg-white p-2 text-center lg:w-fit lg:flex-row lg:rounded-full lg:text-start">
           <Button variant="secondary" className="h-full">
             Начать обучение
           </Button>
-          <p className="font-semibold lg:w-96">
+          <p className="w-80 text-sm font-semibold lg:w-96">
             Попробуйте, первые уроки бесплатны, но нужно пройти тестирование
           </p>
         </div>
