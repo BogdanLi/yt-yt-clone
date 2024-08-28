@@ -6,11 +6,11 @@ import Link from "next/link";
 import Container from "./Container";
 import { Button, NavLink } from "./Buttons";
 
-const links: string[] = [
-  "Чему вы научитесь",
-  "Процесс обучения",
-  "Стоимость",
-  "Контакты",
+const links = [
+  { title: "Чему вы научитесь", href: "#curriculum" },
+  { title: "Процесс обучения", href: "#process" },
+  { title: "Стоимость", href: "#pricing" },
+  { title: "Контакты", href: "#contacts" },
 ];
 
 const Header = () => {
@@ -24,7 +24,9 @@ const Header = () => {
             </Link>
             <div className="hidden gap-10 md:flex">
               {links.map((link) => (
-                <NavLink key={link}>{link}</NavLink>
+                <NavLink key={link.title} href={link.href}>
+                  {link.title}
+                </NavLink>
               ))}
             </div>
           </div>

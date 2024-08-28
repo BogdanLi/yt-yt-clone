@@ -13,7 +13,7 @@ import Link from "next/link";
 const Footer = () => {
   return (
     <footer>
-      <Section>
+      <Section id="contacts">
         <Container>
           <div className="flex flex-col justify-between py-8 lg:flex-row">
             <div>
@@ -36,11 +36,21 @@ const Footer = () => {
             </div>
             <div className="flex flex-col gap-16 pt-12 text-center lg:flex-row lg:pt-0 lg:text-start">
               <div className="flex flex-col gap-6 text-dark">
-                <Link href={""}>Чему вы научитесь</Link>
-                <Link href={""}>Процесс обучения</Link>
-                <Link href={""}>Стоимость</Link>
-                <Link href={""}>Контакты</Link>
-                <Link href={""}>Регистрация</Link>
+                <Link className="hover:text-secondary" href={"#curriculum"}>
+                  Чему вы научитесь
+                </Link>
+                <Link className="hover:text-secondary" href={"#process"}>
+                  Процесс обучения
+                </Link>
+                <Link className="hover:text-secondary" href={"#pricing"}>
+                  Стоимость
+                </Link>
+                <Link className="hover:text-secondary" href={"#contacts"}>
+                  Контакты
+                </Link>
+                <Link className="hover:text-secondary" href={""}>
+                  Регистрация
+                </Link>
               </div>
               <div className="flex flex-col justify-between gap-12">
                 <div className="flex flex-col">

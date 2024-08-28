@@ -17,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="ru">
+    <html lang="ru" className="scroll-smooth">
       <body className={`${montserrat.className} bg-[#f9f8fd]`}>
         <Header />
         {children}

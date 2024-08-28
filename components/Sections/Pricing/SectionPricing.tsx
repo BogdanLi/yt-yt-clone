@@ -31,7 +31,7 @@ const cards = [
 
 const PricingSection = () => {
   return (
-    <Section>
+    <Section id="pricing">
       <Container>
         <Typography variant="h1" center>
           Стоимость обучения

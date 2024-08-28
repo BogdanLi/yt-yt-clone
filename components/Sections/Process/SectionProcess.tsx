@@ -27,7 +27,7 @@ const steps = [
 
 const ProcessSection = () => {
   return (
-    <Section>
+    <Section id="process">
       <Container>
         <Typography variant="h1" center>
           Как происходит обучение на YtYt?

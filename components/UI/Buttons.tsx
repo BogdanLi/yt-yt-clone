@@ -4,13 +4,17 @@ import { ReactNode } from "react";
 
 interface NavLinkProps {
   children: ReactNode;
+  href: string;
 }
 
-export const NavLink = ({ children }: NavLinkProps) => {
+export const NavLink = ({ children, href }: NavLinkProps) => {
   return (
-    <button className="text-sm transition-all duration-150 hover:text-secondary">
+    <Link
+      href={href}
+      className="text-sm transition-all duration-150 hover:text-secondary"
+    >
       {children}
-    </button>
+    </Link>
   );
 };
 
@@ -46,7 +50,11 @@ interface FooterSocialLinkProps {
   height: number;
 }
 
-export const FooterSocialLink = ({ image, width, height }: FooterSocialLinkProps) => {
+export const FooterSocialLink = ({
+  image,
+  width,
+  height,
+}: FooterSocialLinkProps) => {
   return (
     <Link
       href={""}

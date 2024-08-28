@@ -7,7 +7,7 @@ import Typography from "@/components/UI/Typography";
 
 const TechSection = () => {
   return (
-    <Section className="bg-white">
+    <Section className="bg-white" id="curriculum">
       <Container className="space-y-4">
         <Typography variant="h1" center>
           Какие технологии вы изучите:
