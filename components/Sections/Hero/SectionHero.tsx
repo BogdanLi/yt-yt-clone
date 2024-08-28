@@ -4,6 +4,7 @@ import Container from "../../UI/Container";
 
 import hero from "@/assets/images/hero.svg";
 import Section from "../../UI/Section";
+import Typography from "@/components/UI/Typography";
 
 const HeroSection = () => {
   return (
@@ -11,7 +12,7 @@ const HeroSection = () => {
       <Container>
         <div className="my-12 grid items-center gap-12 md:grid-cols-5">
           <div className="col-span-3 text-center sm:text-start md:w-3/4">
-            <p className="text-2xl md:text-4xl">
+            <Typography variant="h1" className="font-normal">
               Школа{" "}
               <span className="font-bold">
                 <span className="text-secondary">{"{"}</span>
@@ -19,7 +20,7 @@ const HeroSection = () => {
                 <span className="text-secondary">{"}"}</span>
               </span>{" "}
               для тех, кому нужны реальные навыки, а не просто сертификат
-            </p>
+            </Typography>
             <p className="mt-11">
               Пройдите тестирование, чтобы получить доступ к бесплатным вводным
               урокам

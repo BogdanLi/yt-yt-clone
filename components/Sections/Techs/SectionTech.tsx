@@ -3,14 +3,15 @@ import Container from "../../UI/Container";
 import Section from "../../UI/Section";
 
 import techs from "@/assets/images/tech.svg";
+import Typography from "@/components/UI/Typography";
 
 const TechSection = () => {
   return (
     <Section className="bg-white">
       <Container className="space-y-4">
-        <h1 className="text-center text-xl font-semibold sm:text-4xl">
+        <Typography variant="h1" center>
           Какие технологии вы изучите:
-        </h1>
+        </Typography>
         <div className="flex justify-center rounded-[48px] bg-[#EAF2F5] px-4 py-6 sm:px-12 lg:py-12 lg:pb-0">
           <div className="grid md:grid-cols-2 lg:w-3/4">
             <div className="hidden md:block">

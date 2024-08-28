@@ -8,6 +8,7 @@ import schedule from "@/assets/images/schedule.svg";
 import connect from "@/assets/images/connect.svg";
 import payment from "@/assets/images/payment.svg";
 import refund from "@/assets/images/refund.svg";
+import Typography from "@/components/UI/Typography";
 
 const cards = [
   {
@@ -61,9 +62,9 @@ const TeachingSection = () => {
   return (
     <Section className="bg-white">
       <Container className="space-y-4 lg:space-y-12">
-        <h1 className="text-center text-xl font-semibold sm:text-4xl">
+        <Typography variant="h1" center>
           Обучение в YtYt – это удобно и результативно
-        </h1>
+        </Typography>
         <div className="flex flex-wrap justify-center gap-7">
           {cards.map((el) => (
             <TeachingCard {...el} key={el.id} />

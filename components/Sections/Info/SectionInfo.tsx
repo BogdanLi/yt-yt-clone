@@ -51,7 +51,7 @@ interface ImageCardProps {
 
 function ImageCard({ src }: ImageCardProps) {
   return (
-    <div className="bg-gray flex w-full justify-center rounded-2xl p-10">
+    <div className="grid place-items-center rounded-3xl bg-gray p-10">
       <Image src={src} alt="" width={270} height={230} />
     </div>
   );
@@ -63,7 +63,7 @@ interface CardProps {
 
 function Card({ children }: CardProps) {
   return (
-    <div className="bg-gray col-span-2 space-y-4 rounded-2xl px-12 py-10 lg:px-16">
+    <div className="space-y-4 rounded-3xl bg-gray px-12 py-10 lg:col-span-2 lg:px-16">
       {children}
     </div>
   );

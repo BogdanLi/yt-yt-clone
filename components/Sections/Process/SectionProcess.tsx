@@ -2,6 +2,7 @@ import Container from "@/components/UI/Container";
 import Section from "@/components/UI/Section";
 import ProcessCard from "./ProcessCard";
 import { Button } from "@/components/UI/Buttons";
+import Typography from "@/components/UI/Typography";
 
 const steps = [
   {
@@ -28,16 +29,16 @@ const ProcessSection = () => {
   return (
     <Section>
       <Container>
-        <h1 className="text-center text-xl font-semibold sm:text-4xl">
+        <Typography variant="h1" center>
           Как происходит обучение на YtYt?
-        </h1>
-        <p className="mx-auto mt-6 text-center text-xs lg:w-1/2 lg:text-base">
+        </Typography>
+        <p className="mx-auto text-center text-xs lg:w-1/2 lg:text-base">
           Обучение должно быть комфортным. Поэтому мы разработали собственную
           платформу для обучения программированию. На ней вы можете не только
           изучать теорию, но и запускать готовые примеры и даже писать свой
           собственный код.
         </p>
-        <div className="mt-8 grid gap-16 rounded-3xl bg-white p-14 lg:grid-cols-3">
+        <div className="mt-8 grid gap-16 rounded-3xl bg-white p-6 lg:grid-cols-3 lg:p-14">
           {steps.map((step) => (
             <ProcessCard key={step.step} {...step} />
           ))}
