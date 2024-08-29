@@ -9,11 +9,11 @@ const MobileSidebar = () => {
 
   return (
     <div
-      className={`fixed flex h-screen w-screen justify-end bg-black bg-opacity-70 p-8 transition-all duration-150 ${mobileSidebar ? "" : "-z-10 opacity-0"}`}
+      className={`fixed flex h-screen w-screen justify-end bg-black bg-opacity-70 p-8 transition-all duration-150 ${mobileSidebar ? "" : "-z-[1] opacity-0"}`}
       onClick={closeMobileSidebar}
     >
       <div
-        className="relative flex flex-col justify-between rounded-3xl bg-white p-8 pt-16"
+        className={`relative flex flex-col justify-between rounded-3xl bg-white p-8 pt-16 transition-all duration-150 ${mobileSidebar ? "translate-x-0" : "translate-x-full"}`}
         onClick={(e) => e.stopPropagation()}
       >
         <button className="absolute right-8 top-8" onClick={closeMobileSidebar}>
@@ -50,7 +50,7 @@ const MobileSidebar = () => {
           </Link>
           <Link
             onClick={closeMobileSidebar}
-            href={"//#endregion"}
+            href={"/"}
             className="text-xl font-medium"
           >
             Регистрация
