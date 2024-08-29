@@ -31,7 +31,7 @@ export const Button = ({
 }: ButtonProps) => {
   const variants: { primary: string; secondary: string; tertiary: string } = {
     primary: "bg-primary text-white hover:bg-secondary",
-    secondary: "bg-secondary text-white",
+    secondary: "bg-secondary text-white hover:bg-primary",
     tertiary: "text-dark hover:text-secondary",
   };
 
