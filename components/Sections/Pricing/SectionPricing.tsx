@@ -10,6 +10,7 @@ import microphone from "@/assets/images/microphone.svg";
 import Image from "next/image";
 import PricingTable from "./PricingTable";
 import { Button } from "@/components/UI/Buttons";
+import arrow from "@/assets/icons/diagonal-arrow.svg";
 
 const cards = [
   {
@@ -64,8 +65,9 @@ const PricingSection = () => {
             что вы получите все знания, предусмотренные учебной программой.
           </p>
           <div className="grid place-items-center lg:col-span-3">
-            <Button variant="secondary" className="rounded-full !px-12 lg:py-8">
+            <Button variant="secondary">
               Начать обучение
+              <Image src={arrow.src} alt="arrow" width={16} height={16} />
             </Button>
           </div>
         </div>

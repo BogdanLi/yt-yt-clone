@@ -22,22 +22,26 @@ interface ButtonProps {
   children: ReactNode;
   className?: string;
   variant?: "primary" | "secondary" | "tertiary";
+  onClick?: () => void;
 }
 
 export const Button = ({
   children,
   className = "",
   variant = "primary",
+  onClick,
 }: ButtonProps) => {
   const variants: { primary: string; secondary: string; tertiary: string } = {
     primary: "bg-primary text-white hover:bg-secondary",
-    secondary: "bg-secondary text-white hover:bg-primary",
+    secondary:
+      "bg-secondary text-white hover:bg-primary rounded-full px-6 py-4",
     tertiary: "text-dark hover:text-secondary",
   };
 
   return (
     <button
-      className={`group h-fit rounded-3xl px-4 py-2 transition-all duration-150 ${variants[variant]} ${className}`}
+      onClick={onClick}
+      className={`group flex h-fit justify-center gap-2 rounded-3xl px-4 py-2 transition-all duration-150 ${variants[variant]} ${className}`}
     >
       {children}
     </button>

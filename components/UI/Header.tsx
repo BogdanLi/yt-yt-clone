@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 
 import logo from "@/assets/logo.svg";
@@ -5,6 +7,8 @@ import burger from "@/assets/icons/burger.svg";
 import Link from "next/link";
 import Container from "./Container";
 import { Button, NavLink } from "./Buttons";
+import { usePopupStore } from "@/providers/popups-provider";
+import arrow from "@/assets/icons/horizontal-arrow.svg";
 
 const links = [
   { title: "Чему вы научитесь", href: "#curriculum" },
@@ -14,6 +18,8 @@ const links = [
 ];
 
 const Header = () => {
+  const { showMobileSidebar } = usePopupStore((state) => state);
+
   return (
     <header>
       <Container className="py-3">
@@ -34,10 +40,17 @@ const Header = () => {
             <Button variant="tertiary" className="hidden lg:block">
               Регистрация
             </Button>
-            <Button variant="primary">Войти</Button>
+            <Button variant="primary" className="flex gap-2">
+              <Image src={arrow.src} alt="arrow" width={16} height={16} />
+              Войти
+            </Button>
           </div>
           <div className="md:hidden">
-            <Button variant="tertiary" className="!p-0">
+            <Button
+              onClick={showMobileSidebar}
+              variant="tertiary"
+              className="!p-0"
+            >
               <Image src={burger.src} alt="menu" width={16} height={16} />
             </Button>
           </div>

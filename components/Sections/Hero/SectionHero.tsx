@@ -6,6 +6,8 @@ import hero from "@/assets/images/hero.svg";
 import Section from "../../UI/Section";
 import Typography from "@/components/UI/Typography";
 
+import arrow from "@/assets/icons/diagonal-arrow.svg";
+
 const HeroSection = () => {
   return (
     <Section>
@@ -25,8 +27,12 @@ const HeroSection = () => {
               Пройдите тестирование, чтобы получить доступ к бесплатным вводным
               урокам
             </p>
-            <Button variant="secondary" className="mt-4">
+            <Button
+              variant="secondary"
+              className="mt-4 flex w-full gap-2 lg:w-auto"
+            >
               Пройти тестирование
+              <Image src={arrow.src} alt="arrow" width={16} height={16} />
             </Button>
           </div>
           <div className="col-span-2 hidden md:block">

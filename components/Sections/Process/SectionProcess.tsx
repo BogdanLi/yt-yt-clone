@@ -4,6 +4,9 @@ import ProcessCard from "./ProcessCard";
 import { Button } from "@/components/UI/Buttons";
 import Typography from "@/components/UI/Typography";
 
+import arrow from "@/assets/icons/diagonal-arrow.svg";
+import Image from "next/image";
+
 const steps = [
   {
     step: "01",
@@ -46,6 +49,7 @@ const ProcessSection = () => {
         <div className="mx-auto mt-4 flex flex-col items-center gap-4 rounded-3xl bg-white p-2 text-center lg:w-fit lg:flex-row lg:rounded-full lg:text-start">
           <Button variant="secondary" className="h-full">
             Начать обучение
+            <Image src={arrow.src} alt="arrow" width={16} height={16} />
           </Button>
           <p className="w-80 text-sm font-semibold lg:w-96">
             Попробуйте, первые уроки бесплатны, но нужно пройти тестирование

@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/UI/Header";
 import Footer from "@/components/UI/Footer";
 import MobileSidebar from "@/components/UI/MobileSidebar";
+import { PopupsStoreProvider } from "@/providers/popups-provider";
 
 const montserrat = Montserrat({ subsets: ["cyrillic", "latin"] });
 
@@ -19,10 +20,12 @@ export default function RootLayout({
   return (
     <html lang="ru" className="scroll-smooth">
       <body className={`${montserrat.className} bg-[#f9f8fd]`}>
-        <MobileSidebar />
-        <Header />
-        {children}
-        <Footer />
+        <PopupsStoreProvider>
+          <MobileSidebar />
+          <Header />
+          {children}
+          <Footer />
+        </PopupsStoreProvider>
       </body>
     </html>
   );
