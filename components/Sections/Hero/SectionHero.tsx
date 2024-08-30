@@ -1,3 +1,5 @@
+"use client";
+
 import Image from "next/image";
 import { Button } from "../../UI/Buttons";
 import Container from "../../UI/Container";
@@ -7,8 +9,11 @@ import Section from "../../UI/Section";
 import Typography from "@/components/UI/Typography";
 
 import arrow from "@/assets/icons/diagonal-arrow.svg";
+import { usePopupStore } from "@/providers/popups-provider";
 
 const HeroSection = () => {
+  const { showModal } = usePopupStore((state) => state);
+
   return (
     <Section>
       <Container>
@@ -30,6 +35,7 @@ const HeroSection = () => {
             <Button
               variant="secondary"
               className="mt-4 flex w-full gap-2 lg:w-auto"
+              onClick={showModal}
             >
               Пройти тестирование
               <Image src={arrow.src} alt="arrow" width={16} height={16} />

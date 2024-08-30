@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@/components/UI/Container";
 import Section from "@/components/UI/Section";
 import Typography from "@/components/UI/Typography";
@@ -11,6 +13,7 @@ import Image from "next/image";
 import PricingTable from "./PricingTable";
 import { Button } from "@/components/UI/Buttons";
 import arrow from "@/assets/icons/diagonal-arrow.svg";
+import { usePopupStore } from "@/providers/popups-provider";
 
 const cards = [
   {
@@ -31,6 +34,8 @@ const cards = [
 ];
 
 const PricingSection = () => {
+  const { showModal } = usePopupStore((state) => state);
+
   return (
     <Section id="pricing">
       <Container>
@@ -54,7 +59,7 @@ const PricingSection = () => {
         <p className="ps-8 pt-8 text-[#8E8E8E]">
           * если занятиям уделяется около 20 часов в неделю
         </p>
-        <div className="mt-4 grid gap-12 rounded-3xl bg-[#EAF2F5] p-16 lg:grid-cols-12">
+        <div className="mt-4 grid gap-12 rounded-3xl bg-[#EAF2F5] px-6 py-4 lg:grid-cols-12 lg:p-16">
           <div className="grid place-items-center lg:col-span-2">
             <Image src={microphone.src} alt="" width={90} height={90} />
           </div>
@@ -65,7 +70,7 @@ const PricingSection = () => {
             что вы получите все знания, предусмотренные учебной программой.
           </p>
           <div className="grid place-items-center lg:col-span-3">
-            <Button variant="secondary">
+            <Button variant="secondary" onClick={showModal}>
               Начать обучение
               <Image src={arrow.src} alt="arrow" width={16} height={16} />
             </Button>

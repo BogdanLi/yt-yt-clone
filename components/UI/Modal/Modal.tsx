@@ -9,7 +9,7 @@ interface Props {
 const Modal = ({ children, className = "", closeModal }: Props) => {
   return (
     <div
-      className="fixed grid h-screen w-full place-items-center bg-black bg-opacity-40"
+      className="fixed top-0 grid h-screen w-full place-items-center bg-black bg-opacity-40"
       onClick={closeModal}
     >
       <div

@@ -1,3 +1,5 @@
+"use client";
+
 import Container from "@/components/UI/Container";
 import Section from "@/components/UI/Section";
 import ProcessCard from "./ProcessCard";
@@ -6,6 +8,7 @@ import Typography from "@/components/UI/Typography";
 
 import arrow from "@/assets/icons/diagonal-arrow.svg";
 import Image from "next/image";
+import { usePopupStore } from "@/providers/popups-provider";
 
 const steps = [
   {
@@ -29,6 +32,8 @@ const steps = [
 ];
 
 const ProcessSection = () => {
+  const { showModal } = usePopupStore((state) => state);
+
   return (
     <Section id="process">
       <Container>
@@ -47,7 +52,7 @@ const ProcessSection = () => {
           ))}
         </div>
         <div className="mx-auto mt-4 flex flex-col items-center gap-4 rounded-3xl bg-white p-2 text-center lg:w-fit lg:flex-row lg:rounded-full lg:text-start">
-          <Button variant="secondary" className="h-full">
+          <Button onClick={showModal} variant="secondary" className="h-full">
             Начать обучение
             <Image src={arrow.src} alt="arrow" width={16} height={16} />
           </Button>
